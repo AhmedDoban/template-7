@@ -712,10 +712,43 @@ p {
     background-color: var(--blue-color);
   }
 }
-.LastProjectProgress img{
+.LastProjectProgress img {
   position: absolute;
   width: 160px;
   right: 10px;
   bottom: 10px;
-  opacity: .5;
+  opacity: 0.5;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# wrapper Reminders
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Reminders ul > li {
+  margin: 15px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.Reminders ul > li .info {
+  padding-left: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.Reminders ul > li:nth-child(1) .info {
+  border-left: 2px solid var(--blue-color);
+}
+.Reminders ul > li:nth-child(2) .info {
+  border-left: 2px solid var(--green-color);
+}
+.Reminders ul > li:nth-child(3) .info {
+  border-left: 2px solid var(--orange-color);
+}
+.Reminders ul > li:nth-child(4) .info {
+  border-left: 2px solid var(--red-color);
+}
+.Reminders ul > li > span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 15px;
 }
