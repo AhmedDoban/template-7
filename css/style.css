@@ -100,9 +100,6 @@ p {
   overflow: hidden;
   padding: 20px;
 }
-.section-box:last-child {
-  margin-bottom: 20px;
-}
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # back-to-top
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
@@ -233,6 +230,7 @@ p {
 .content {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Content head
@@ -859,4 +857,58 @@ p {
 .SocialMediaStats .linkedin {
   background-color: rgb(0 119 181 / 20%);
   color: #0077b5;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Projects
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Projects {
+  margin: 20px;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .Projects {
+    margin: 20px 10px;
+  }
+}
+.Projects h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.Projects .responsive-table {
+  overflow-x: auto;
+}
+.Projects table {
+  min-width: 1000px;
+  width: 100%;
+  border-spacing: 0;
+}
+.Projects table td {
+  padding: 15px;
+}
+.Projects tbody td {
+  border-bottom: var(--main-border);
+  border-left: var(--main-border);
+}
+.Projects tbody tr:hover td {
+  background-color: #f5f6f9;
+}
+.Projects tbody tr td:last-child {
+  border-right: var(--main-border);
+}
+.Projects table thead tr {
+  background-color: #eee;
+  font-weight: bold;
+}
+.Projects .responsive-table table tbody tr td img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.Projects .responsive-table table tbody tr td img:not(:first-child) {
+  margin-left: -20px;
+}
+.Projects table tbody tr td span {
+  font-size: 13px;
+  color: #fff;
 }
