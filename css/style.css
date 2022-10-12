@@ -31,6 +31,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--blue-alt-color);
 }
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# colors
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
 .orange {
   color: var(--orange-color);
 }
@@ -65,7 +68,9 @@
   padding: 4px 10px;
   border-radius: var(--main-border-radius);
 }
-
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Body General
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
 html {
   scroll-behavior: smooth;
 }
@@ -93,12 +98,52 @@ p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Section box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
 .section-box {
   position: relative;
   background-color: #fff;
   border-radius: var(--main-border-radius);
   overflow: hidden;
   padding: 20px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Switch
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.toggle-checkbox {
+  appearance: none;
+}
+.toggle-switch {
+  position: relative;
+  width: 72px;
+  height: 28px;
+  background-color: #ccc;
+  border-radius: 1rem;
+}
+.toggle-switch::before {
+  position: absolute;
+  content: "\f00d";
+  font-weight: 900;
+  font-family: var(--fa-style-family-classic);
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  color: var(--blue-color);
+  left: 46px;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # back-to-top
@@ -911,4 +956,25 @@ p {
 .Projects table tbody tr td span {
   font-size: 13px;
   color: #fff;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# site Control
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.siteControl .control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.siteControl textarea {
+  width: 100%;
+  border: var(--main-border);
+  resize: none;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: var(--main-border-radius);
+  letter-spacing: 1px;
+}
+textarea:focus {
+  outline: none;
 }
