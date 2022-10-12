@@ -64,9 +64,16 @@
 .green-bg {
   background-color: var(--green-color);
 }
+.gray {
+  color: var(--gray-color);
+}
+.gray-bg {
+  background-color: var(--gray-color);
+}
 .btn {
   padding: 4px 10px;
   border-radius: var(--main-border-radius);
+  color: #fff;
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Body General
@@ -127,6 +134,7 @@ textarea:focus {
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
 .toggle-checkbox {
   appearance: none;
+  display: none;
 }
 .toggle-switch {
   position: relative;
@@ -1009,4 +1017,21 @@ textarea:focus {
   color: var(--gray-color);
   font-size: 14px;
   margin: 5px 0;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Security  Info
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Security-info .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px 0;
+  border-bottom: var(--main-border);
+}
+.Security-info .box h4 {
+  font-weight: normal;
+}
+.Security-info .box p{
+  font-size: 12px;
 }
