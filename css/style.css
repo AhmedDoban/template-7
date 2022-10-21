@@ -107,6 +107,19 @@ p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.progress {
+  position: relative;
+  width: 50%;
+  height: 5px;
+  background-color: #eee;
+}
+.progress span {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: var(--main-border-radius);
+}
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # input General
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
@@ -286,8 +299,12 @@ textarea:focus {
     padding: 10px;
   }
   .sidebar > h3 {
-    font-size: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
   .sidebar ul li a span {
     display: none;
@@ -925,54 +942,53 @@ textarea:focus {
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Projects
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.Projects {
-  margin: 20px;
+.index-Projects {
   max-width: 100%;
 }
 @media (max-width: 767px) {
-  .Projects {
+  .index-Projects {
     margin: 20px 10px;
   }
 }
-.Projects h2 {
+.index-Projects h2 {
   margin: 0;
   margin-bottom: 20px;
 }
-.Projects .responsive-table {
+.index-Projects .responsive-table {
   overflow-x: auto;
 }
-.Projects table {
+.index-Projects table {
   min-width: 1000px;
   width: 100%;
   border-spacing: 0;
 }
-.Projects table td {
+.index-Projects table td {
   padding: 15px;
 }
-.Projects tbody td {
+.index-Projects tbody td {
   border-bottom: var(--main-border);
   border-left: var(--main-border);
 }
-.Projects tbody tr:hover td {
+.index-Projects tbody tr:hover td {
   background-color: #f5f6f9;
 }
-.Projects tbody tr td:last-child {
+.index-Projects tbody tr td:last-child {
   border-right: var(--main-border);
 }
-.Projects table thead tr {
+.index-Projects table thead tr {
   background-color: #eee;
   font-weight: bold;
 }
-.Projects .responsive-table table tbody tr td img {
+.index-Projects .responsive-table table tbody tr td img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   cursor: pointer;
 }
-.Projects .responsive-table table tbody tr td img:not(:first-child) {
+.index-Projects .responsive-table table tbody tr td img:not(:first-child) {
   margin-left: -20px;
 }
-.Projects table tbody tr td span {
+.index-Projects table tbody tr td span {
   font-size: 13px;
   color: #fff;
 }
@@ -1255,20 +1271,6 @@ textarea:focus {
   margin: 10px 0;
 }
 
-.main-data .progress {
-  position: relative;
-  width: 50%;
-  height: 5px;
-  background-color: #eee;
-}
-.main-data .progress span {
-  position: absolute;
-  background-color: var(--blue-color);
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: var(--main-border-radius);
-}
 .main-data i {
   color: var(--orange-color);
   margin: 10px 0 0 0;
@@ -1399,5 +1401,57 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     gap: 15px;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# projects-page
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.projects-page .box .box-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.projects-page .box > p {
+  margin-bottom: 50px;
+}
+.projects-page .box .box-img a {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.projects-page .box .box-img a > img {
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.projects-page .box .box-img a:not(:first-child) {
+  margin-left: -20px;
+}
+.projects-page .box .project-use {
+  padding: 15px 0;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.projects-page .box .project-use span {
+  font-size: 13.2px;
+  background-color: #eee;
+  font-weight: 400;
+}
+.projects-page .box .box-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 0 0;
+}
+@media (max-width: 992px) {
+  .projects-page .box .project-use {
+    flex-direction: column;
+  }
+  .projects-page .box .project-use span {
+    width: fit-content;
   }
 }
