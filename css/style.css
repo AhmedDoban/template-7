@@ -1467,7 +1467,8 @@ textarea:focus {
   margin: 20px;
 }
 .Friends .friend,
-.courses-page .box {
+.courses-page .box,
+.Files-page .left .file {
   background-color: #fff;
   position: relative;
   border-radius: var(--main-border-radius);
@@ -1525,7 +1526,8 @@ textarea:focus {
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Friends page
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.Friends .friend .contact {
+.Friends .friend .contact,
+.Files-page .left .file i {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -1611,4 +1613,148 @@ textarea:focus {
 }
 .Friends .friend .frind-footer a:nth-child(2) {
   background-color: var(--red-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Files page left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Files-page {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 20px 20px 20px;
+  gap: 10px;
+}
+
+.Files-page .left {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.Files-page .left .file i {
+  color: var(--gray-color);
+  cursor: pointer;
+}
+.Files-page .left .file .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.Files-page .left .file .icon img {
+  width: 70px;
+  height: 70px;
+  transition: var(--main-transition);
+}
+.Files-page .left .file .file-titel {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.Files-page .left .file .file-titel + p {
+  margin-left: 10px;
+}
+.Files-page .left .file .info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+.Files-page .left .file .info span {
+  color: var(--gray-color);
+  font-size: 13px;
+}
+.Files-page .left .file:hover .icon img {
+  transform: rotate(5deg);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Files page right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Files-page .right {
+  min-width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: var(--main-border-radius);
+}
+.Files-page .right .box {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: var(--main-border-radius);
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.Files-page .right .box i {
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.Files-page .right .box .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Files-page .right .box .content span {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  color: var(--gray-color);
+}
+.Files-page .right .box i.fa-file-pdf {
+  color: var(--blue-color);
+  background-color: rgb(0 117 255 / 20%);
+}
+.Files-page .right .box i.fa-images {
+  color: var(--green-color);
+  background-color: #22c55e1e;
+}
+.Files-page .right .box i.fa-file-word {
+  color: var(--red-color);
+  background-color: #f443361e;
+}
+.Files-page .right .box i.fa-file-csv {
+  color: var(--orange-color);
+  background-color: #f59f0b21;
+}
+@media (max-width: 776px) {
+  .Files-page {
+    flex-direction: column-reverse;
+    align-items: normal;
+  }
+  .Files-page .left {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+.Files-page .right button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-color);
+  border: 0;
+  margin: 10px auto;
+  padding: 7px 10px;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+.Files-page .right button i {
+  margin-right: 5px;
+}
+.Files-page .right button:hover i {
+  animation: up 0.5s ease-in-out infinite alternate-reverse;
+}
+@keyframes up {
+  to {
+    transform: translateY(-25%);
+  }
 }
